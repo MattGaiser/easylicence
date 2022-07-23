@@ -6,8 +6,10 @@ import * as React from 'react';
 import { appTheme } from "./themes/theme";
 import Button from "@mui/material/Button";
 import RequirementList from "./components/requirement-list";
+import {HomePage} from "./components/homepage";
 
 function App() {
+  const [chosenType, setChosenType] = React.useState(null);
   const [activeForm, setActiveForm] = React.useState(false);
 
   const openForm = () => {
@@ -29,7 +31,10 @@ function App() {
         />
       </header>
         <p>Pathways: Mobile Food Application</p>
-      {!activeForm && (<Card className="initial-card-box">
+      {chosenType === null && (<Card className="card-box">
+        <HomePage changeFunct={setChosenType}/>
+      </Card>)}
+      {chosenType !== null && !activeForm && (<Card className="initial-card-box">
         <h1>Sell Mobile Food in Calgary</h1>
         <p className="max-width">We are excited that you are here. Whether you want to build a food truck empire or just want to share you grandmother's ribs with your community, this is where you start. Things you will want before getting started:</p>
         <RequirementList className="requirement-list-box"/>
