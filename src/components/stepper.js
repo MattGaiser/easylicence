@@ -13,18 +13,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const steps = [
     {
-        label: 'Invade Alaska',
+        label: 'Operating Location',
         description: `For each ad campaign that you create, you can control how much
               you're willing to spend on clicks and conversions, which networks
               and geographical locations you want your ads to show on, and more.`,
     },
     {
-        label: 'Create an ad group',
+        label: 'Ownership Structure',
         description:
             'An ad group contains one or more ads which target a shared set of keywords. An ad group contains one or more ads which target a shared set of keywords.',
     },
     {
-        label: 'Create an ad',
+        label: 'Vehicle Type',
         description: `Try out different ad text to see what brings in the most customers,
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
@@ -65,6 +65,7 @@ export default function VerticalLinearStepper() {
                             {step.label}
                         </StepLabel>
                         <StepContent >
+                            <h1>{step.label}</h1>
                             <Typography>{step.description}</Typography>
                             <Box sx={{ mb: 2 }}>
                                 <div>

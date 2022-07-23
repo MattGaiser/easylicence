@@ -19,7 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": ""
+  "homepage": "https://mattgaiser.github.io/easylicence",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
