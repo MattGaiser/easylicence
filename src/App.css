@@ -37,7 +37,6 @@
 }
 
 .card-box{
-  padding: 5%;
 }
 
 .card-box-home {
@@ -75,6 +74,7 @@
   flex-direction: row;  /* make main axis vertical */
   justify-content: center; /* center items vertically, in this case */
   align-items: center;     /* center items horizontally, in this case */
+  margin: 5%;
 }
 
 .icon-label-box {
@@ -91,3 +91,29 @@
   height: 3em;
 }
 
+.icon-loader {
+  color: red;
+  width: 5em;
+  height: 5em;
+}
+
+.step-box {
+  margin: 5%;
+}
+
+
+.image-box {
+  width: 150px;
+  margin-bottom: -40px;
+}
+
+.image-box-coc {
+  margin-left: 10px;
+  width: 150px;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}

@@ -3,6 +3,11 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import {DatePicker} from '@mui/x-date-pickers/DatePicker';
+import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
+import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
+
 
 export function RadioButtonsGroupLegalEntity() {
     return (
@@ -11,9 +16,9 @@ export function RadioButtonsGroupLegalEntity() {
                 aria-labelledby="demo-radio-buttons-group-label"
                 name="radio-buttons-group"
             >
-                <FormControlLabel value="sp" control={<Radio />} label="Sole Proprietorship" />
-                <FormControlLabel value="p" control={<Radio />} label="Partnership" />
-                <FormControlLabel value="c" control={<Radio />} label="Corporation" />
+                <FormControlLabel value="sp" control={<Radio/>} label="Sole Proprietorship"/>
+                <FormControlLabel value="p" control={<Radio/>} label="Partnership"/>
+                <FormControlLabel value="c" control={<Radio/>} label="Corporation"/>
             </RadioGroup>
         </FormControl>
     );
@@ -26,10 +31,10 @@ export function RadioButtonsGroupFoodCookedLocation() {
                 aria-labelledby="demo-radio-buttons-group-label"
                 name="radio-buttons-group"
             >
-                <FormControlLabel value="cb" control={<Radio />} label="Commercial Based" />
-                <FormControlLabel value="hb" control={<Radio />} label="Home Based" />
-                <FormControlLabel value="ot" control={<Radio />} label="Out of Town" />
-                <FormControlLabel value="m" control={<Radio />} label="Mobile" />
+                <FormControlLabel value="cb" control={<Radio/>} label="Commercial Based"/>
+                <FormControlLabel value="hb" control={<Radio/>} label="Home Based"/>
+                <FormControlLabel value="ot" control={<Radio/>} label="Out of Town"/>
+                <FormControlLabel value="m" control={<Radio/>} label="Mobile"/>
             </RadioGroup>
         </FormControl>
     );
@@ -42,8 +47,8 @@ export function RadioButtonsGroupVehicleType() {
                 aria-labelledby="demo-radio-buttons-group-label"
                 name="radio-buttons-group"
             >
-                <FormControlLabel value="tr" control={<Radio />} label="Commercial Based" />
-                <FormControlLabel value="pc" control={<Radio />} label="Home Based" />
+                <FormControlLabel value="tr" control={<Radio/>} label="Commercial Based"/>
+                <FormControlLabel value="pc" control={<Radio/>} label="Home Based"/>
             </RadioGroup>
         </FormControl>
     );
@@ -56,8 +61,8 @@ export function RadioButtonsManufacturingType() {
                 aria-labelledby="demo-radio-buttons-group-label"
                 name="radio-buttons-group"
             >
-                <FormControlLabel value="pf" control={<Radio />} label="Pre-Packaged Food" />
-                <FormControlLabel value="of" control={<Radio />} label="On Premises Food" />
+                <FormControlLabel value="pf" control={<Radio/>} label="Pre-Packaged Food"/>
+                <FormControlLabel value="of" control={<Radio/>} label="On Premises Food"/>
             </RadioGroup>
         </FormControl>
     );
@@ -70,10 +75,27 @@ export function RadioButtonsSalesLocations() {
                 aria-labelledby="demo-radio-buttons-group-label"
                 name="radio-buttons-group"
             >
-                <FormControlLabel value="pf" control={<Radio />} label="Public Property" />
-                <FormControlLabel value="of" control={<Radio />} label="Private Property" />
-                <FormControlLabel value="bt" control={<Radio />} label="Both" />
+                <FormControlLabel value="pf" control={<Radio/>} label="Public Property"/>
+                <FormControlLabel value="of" control={<Radio/>} label="Private Property"/>
+                <FormControlLabel value="bt" control={<Radio/>} label="Both"/>
             </RadioGroup>
         </FormControl>
     );
+}
+
+export function CalendarSelectorFireInspection() {
+
+    const [value, setValue] = React.useState(new Date());
+
+    return (
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <DatePicker
+            value={value}
+            onChange={newDate => setValue(newDate)}
+            date={new Date()}
+            renderInput={(params) => <TextField {...params} />}
+        />
+        </LocalizationProvider>
+    )
+
 }

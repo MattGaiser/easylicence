@@ -10,45 +10,23 @@ export default function RequirementList() {
     return (<Box sx={{ width: '80%', bgcolor: 'background.paper', marginLeft: '20%' }}>
             <nav aria-label="main mailbox folders">
                 <List>
-                    <ListItem disablePadding>
-                        <ListItemButton>
+                    <ListItem >
                             <ListItemIcon>
                                 <CheckBoxOutlineBlankIcon  />
                             </ListItemIcon>
-                            <ListItemText primary="Inbox" />
-                        </ListItemButton>
+                            <ListItemText primary="Any Existing Documents" />
                     </ListItem>
-                    <ListItem disablePadding>
-                        <ListItemButton>
+                    <ListItem >
                             <ListItemIcon>
                                 <CheckBoxOutlineBlankIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Drafts" />
-                        </ListItemButton>
+                            <ListItemText primary="Photo ID" />
                     </ListItem>
-                    <ListItem disablePadding>
-                        <ListItemButton>
+                    <ListItem >
                             <ListItemIcon>
                                 <CheckBoxOutlineBlankIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Drafts" />
-                        </ListItemButton>
-                    </ListItem>
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <CheckBoxOutlineBlankIcon/>
-                            </ListItemIcon>
-                            <ListItemText primary="Drafts" />
-                        </ListItemButton>
-                    </ListItem>
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <CheckBoxOutlineBlankIcon/>
-                            </ListItemIcon>
-                            <ListItemText primary="Drafts" />
-                        </ListItemButton>
+                            <ListItemText primary="Timeline for Business" />
                     </ListItem>
                 </List>
             </nav>
